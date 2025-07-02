@@ -1,0 +1,185 @@
+/* ძირითადი */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #222;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* ლამაზი გრადიენტი ღია ლურჯიდან მუქ ლურჯ-მუქ ნაცრისფრამდე */
+  color: #d0d9e3; /* მსუბუქი ნაცრისფერი ტექსტი */
+}
+
+[data-theme="dark"] main {
+  background: rgba(20, 30, 45, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #4f6d7a 0%, #3b5360 100%);
+  padding: 1rem 2rem;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 3px solid #1c3144;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: var(--bg-header);
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+  }
+}
+[data-theme="dark"] header {
+  background: linear-gradient(90deg, #1c2a38 0%, #122029 100%);
+  border-bottom: 3px solid #0a1721;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Nav Links */
+header nav a {
+  color: #d1d9e6;
+  margin-right: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] header nav a {
+  color: #aab8c2;
+}
+
+header nav a.active {
+  color: #a1c6ea;
+  border-bottom: 2px solid #a1c6ea;
+}
+
+header nav a:hover {
+  color: #a1c6ea;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #3b5360 0%, #2c414f 100%);
+  color: #c1c9d9;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  border-top: 3px solid #1c3144;
+  user-select: none;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] footer {
+  background: linear-gradient(90deg, #122029 0%, #0a1721 100%);
+  color: #7f8ea4;
+  border-top: 3px solid #0a1721;
+}
+
+/* Button */
+button {
+  cursor: pointer;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #9bb9e0;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+[data-theme="dark"] button {
+  background-color: #2563eb;
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] button:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+/* Input */
+input {
+  padding: 0.5rem 0.8rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px #3b82f6;
+}
+
+[data-theme="dark"] input {
+  background-color: #203a43;
+  border-color: #4b6474;
+  color: #d0d9e3;
+}
+
+[data-theme="dark"] input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 5px #60a5fa;
+}
+
+/* Links inside content */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+[data-theme="dark"] a {
+  color: #60a5fa;
+}
