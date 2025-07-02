@@ -6,7 +6,7 @@ export default function Blog() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // ქართული სათაურები API-ს სტატუსის შესაბამისად
+
   const kaTitles = [
     "პირველი სტატია ქართულად",
     "ახალი ფუნქცია ჩვენს საიტზე",
